@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Network Number Guesser</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="nav">
+        <button class="clear">clear</button>
+        <form method="POST">
+            <button type="submit" class="save">save</button>
+        </form>
+        <h3>{{result}}</h3>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='main.js')}}"></script>
+</body>
+
+<style type="text/css" media="screen">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .nav{
+        width: 310px;
+        height: 50px;
+        position: fixed;
+        top: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    button{
+        border: none;
+        outline: none;
+        padding: .6em 1em;
+        width: 7rem;
+        height: 3rem;
+        border-radius: 3px;
+        background-color: #03bb56;
+        color: #fff;
+    }
+    .save{
+        background-color: #0f65d4;
+    }
+</style>
+
+</html>
