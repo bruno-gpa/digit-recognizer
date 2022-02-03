@@ -17,14 +17,22 @@ clearBtn.addEventListener("click", () => {
 })
 
 // save image as png
-let saveBtn = document.querySelector(".save")
-saveBtn.addEventListener("click", () => {
-    let data = canvas.toDataURL("imag/png")
-    let a = document.createElement("a")
-    a.href = data
-    a.download = "sketch.png"
-    a.click()
-})
+//let saveBtn = document.querySelector(".save")
+//saveBtn.addEventListener("click", () => {
+ //   let data = canvas.toDataURL("imag/png")
+  //  var img = document.getElementById("image").src = data;
+  //  let a = document.createElement("a")
+  //  console.log(data)
+  //  a.href = data
+  //  a.download = "sketch.png"
+  //  a.click()
+//})
+
+function saveBtn() {
+    var canvas = document.getElementById('canvas')
+    document.getElementById('inp_img').value = canvas.toDataURL()
+}
+
 
 // toggle drawing
 window.addEventListener("mousedown", (e) => draw = true)

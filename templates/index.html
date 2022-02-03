@@ -10,10 +10,12 @@
     <canvas id="canvas"></canvas>
     <div class="nav">
         <button class="clear">clear</button>
-        <form method="POST">
-            <button type="submit" class="save">save</button>
+        <form method="POST" action="" onsubmit="saveBtn();">
+            <input id="inp_img" name="img" type="hidden" value="">
+            <input id="upload" type="submit" value="Upload" class="save">
+            <!--<button type="submit" class="save">save</button>-->
         </form>
-        <h3>{{result}}</h3>
+        <!--<h3>{{result}}</h3>-->
     </div>
 
     <script type="text/javascript" src="{{ url_for('static', filename='main.js')}}"></script>
